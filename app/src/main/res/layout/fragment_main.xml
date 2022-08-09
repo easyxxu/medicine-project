@@ -7,15 +7,14 @@
     android:background="#FFFFFF"
     tools:context=".fragment_main">
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/detail_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#f6d170"
-        android:text="Main"
-        android:textSize="50dp"
         android:layout_centerVertical="true"
-        android:layout_centerInParent="true">
-    </TextView>
+        android:layout_centerInParent="true"
+        android:text="약 상세페이지 예시"
+        android:onClick="onClick"/>
+
 
 </RelativeLayout>

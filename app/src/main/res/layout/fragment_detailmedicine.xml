@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detailmedicine">
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="22dp"
+        android:onClick="backButton"
+        android:text="뒤로" />
+
+    <EditText
+        android:id="@+id/medi_name"
+        android:layout_width="335dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="37dp"
+        android:background="#8A8484"
+        android:hint=" 약 이름 입력하기"
+        app:layout_constraintBottom_toTopOf="@+id/medi_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_button"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/medi_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="42dp"
+        android:text="용량"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/medi_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medi_name"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/medi_count_list"
+        android:layout_width="122dp"
+        android:layout_height="27dp"
+        android:popupBackground="@color/white"
+        android:spinnerMode="dropdown"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <TextView
+        android:id="@+id/medi_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="504dp"
+        android:text="시간"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/medi_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medi_count"
+        tools:ignore="MissingConstraints" />
+
+
+    <ListView
+        android:id="@+id/add_medi_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="220dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/dayofweek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:text="요일"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/medi_time"
+        app:layout_constraintTop_toTopOf="@+id/medi_time"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/memo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메모"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/dayofweek"
+        app:layout_constraintTop_toTopOf="@+id/editText"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="289dp"
+        android:layout_height="146dp"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="343dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#353232"
+        android:text="저장하기"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="564dp"
+        tools:ignore="MissingConstraints" />
+
+
+</RelativeLayout>
